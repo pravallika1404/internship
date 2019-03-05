@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<script language="javascript">
+			function valid()
+			{
+				var name=f1.t1.value;
+				var pwd=f1.t2.value;
+				var eid=f1.t4.value;
+				var phn=f1.t5.value;
+				var e=/^[a-zA-Z0-9]((.|_)[a-zA-Z0-9]+)*@[a-zA-Z]+(.|_)[a-z]$/;
+				var e1=/^[a-zA-Z]+$/;
+				if(name=="")
+					alert("Enter name");
+				else if(pwd=="")
+					alert("Enter password");
+				else if(phn=="")
+					alert("Enter phone number");
+				else if(eid=="")
+					alert("Enter e-mail Id");
+					
+				else if(e1.test(name)==false)
+					alert("Only characters should be entered");
+				else 
+					alert("Succesful Completion");
+				
+				
+			}
+		</script>
+	</head>
+	<body bgcolor="cyan">
+		<h1 align="center">Registration Validation</h1>
+		<form name="f1" onsubmit="valid()">
+			<table align="center" cellspacing="10" bgcolor="pink">
+				<tr>
+					<td><label>Name:</label></td>
+					<td><input type="text" name="t1">
+					
+				</tr>
+				<tr>
+					<td><label>Password:</label>
+					<td><input type="password" name="t2">
+					
+				</tr>
+				<tr>
+					<td><label>Confirm Password:</label>
+					<td><input type="password" name="t3">
+				</tr>
+				<tr>
+					<td><label>e-mailId:</label>
+					<td><input type="text" name="t4">
+					
+				</tr>
+				<tr>
+					<td><label>Phone:</label>
+					<td><input type="text" name="t5">
+				</tr>
+				<tr>
+					<td>Gender
+					<td><input type="radio" name="r1">Male<br>
+					<input type="radio" name="r2">Female
+				</tr>
+				<tr>
+					<td><label>Address:</label>
+					<td><textarea></textarea></td>
+					
+				</tr>
+				<tr>
+					<td><label>Zipcode:</label>
+					<td><input type="number">
+				</tr>
+				<tr>
+					<td><label>Country:</label>
+					<td><select type="combo" name="cou">
+						<option>India</option>
+						<option>America</option>
+						<option>Australia</option>
+						<option>Europe</option>
+				</tr>
+				<tr>
+					<td><label>Hobbies</label>
+					<td><input type="checkbox" name="ch1" value="books">reading books</input><br>
+                                             <input type="checkbox" name="ch2" value="music">listening to music</input><br>
+                                            <input type="checkbox" name="ch3" value="books">internet surfing</input>
+					
+				</tr>
+				<tr>
+					<td> <input type="submit" value="Submit">
+					<td><input type="reset" value="Reset">
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
